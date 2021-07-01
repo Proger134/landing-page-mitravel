@@ -777,6 +777,8 @@ select {
 }
 
 .first-screen-slider__item img {
+  max-height: 280px;
+  width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -812,6 +814,13 @@ select {
   font-family: "SFProDisplay", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form {
@@ -1144,6 +1153,7 @@ select {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+  overflow: hidden;
 }
 
 .featured-videos-slider__text {

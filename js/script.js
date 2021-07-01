@@ -24,6 +24,29 @@ $(document).ready(() => {
         $(".header__burger, .header__menu, .header__link, .header__logo, body").toggleClass('activeHeader');
     })
 
+    // Header slider 
+    let step = 1;
+    const items = [
+        {text: "wonderful moutain", image: "./img/image1.jpg"},
+        {text: "wounderful lake", image: "./img/image2.jpg"},
+        {text: "wounderful river", image: "./img/image3.jpg"},
+    ];
+
+    $(".first-screen-slider__prev").click(function(event) {
+        if (step > 1) {
+            step = step - 1;
+        }
+        $(".first-screen-slider__text").text(items[step - 1].text);
+        $(".first-screen-slider__item img").attr("src", items[step - 1].image);
+    })
+    $(".first-screen-slider__next").click(function(event) {
+        if (step < items.length) {
+            step++;
+        }
+        $(".first-screen-slider__text").text(items[step - 1].text);
+        $(".first-screen-slider__item img").attr("src", items[step - 1].image);
+    })
+
     // Footer
     $(".small-footer__title").click(function(event) {
         $(this).next().slideToggle(300);
